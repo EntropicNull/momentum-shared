@@ -7,6 +7,7 @@ export interface StoreItem {
     stock?: number;
     imageUrl?: string;
     isUnlimited?: boolean;
+    isInfinite?: boolean;
 }
 
 export interface StoreItemCardProps {

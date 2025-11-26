@@ -15,7 +15,7 @@ export const getStoreItemCardState = (
     userPoints: number
 ): StoreItemCardState => {
     const canAfford = userPoints >= item.cost;
-    const hasStock = item.isUnlimited || (item.stock !== undefined && item.stock > 0);
+    const hasStock = (item.isInfinite ?? item.isUnlimited) || (item.stock !== undefined && item.stock > 0);
     const isAvailable = hasStock;
 
     return {
