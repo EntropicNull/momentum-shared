@@ -8,7 +8,7 @@ export interface Quest {
     status: 'Available' | 'Active' | 'Completed' | 'PendingApproval';
     claimedBy?: string | string[];
     completedBy?: string | string[];
-    questType?: 'one-time' | 'recurring';
+    questType?: 'one-time' | 'limited' | 'unlimited';
     recurrence?: {
         frequency: 'daily' | 'weekly' | 'monthly';
         nextReset?: string;
